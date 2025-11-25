@@ -17,7 +17,7 @@ spec:
   selector:
     app: wordpress
     tier: mysql
-
+---
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -27,7 +27,7 @@ data:
   # create non-sensitive data attributes
   database: wordpress
   user: wordpress
-  ## ---
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -103,7 +103,7 @@ spec:
       ##
       # add volumes at the pod spec level (same indentation as containers)
       # reference the PVC: mysql-pv-claim
-      ## ---
+---
 ##
 # create persistent volume claim here
 # name: mysql-pv-claim
